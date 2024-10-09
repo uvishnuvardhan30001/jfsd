@@ -72,7 +72,7 @@ body, html {
 h2 {
     margin-bottom: 20px;
     font-size: 24px;
-    color: #333;
+    color: #ffffff;
 }
 
 .input-group {
@@ -159,4 +159,162 @@ h2 {
 
 p {
     font-size: 16px;
+}
+
+/* SignOut button */
+.navbar ul li button {
+    background-color: #ff4c4c;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.navbar ul li button:hover {
+    background-color: #e60000;
+}
+/* Instructor cards */
+.instructor-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 cards per row */
+    gap: 20px; /* Space between the cards */
+    margin-top: 20px;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.instructor-card {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.instructor-card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.instructor-card h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.instructor-card p {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+/* Buttons inside instructor cards */
+.instructor-card .btn {
+    padding: 10px;
+    margin: 5px 0;
+    width: 100%;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.update-btn {
+    background-color: #007bff;
+    color: white;
+}
+
+.delete-btn {
+    background-color: #dc3545;
+    color: white;
+}
+
+.update-btn:hover {
+    background-color: #0056b3;
+}
+
+.delete-btn:hover {
+    background-color: #c82333;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 1200px) {
+    .instructor-container {
+        grid-template-columns: repeat(3, 1fr); /* 3 cards per row on medium screens */
+    }
+}
+
+@media (max-width: 900px) {
+    .instructor-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 cards per row on small screens */
+    }
+}
+
+@media (max-width: 600px) {
+    .instructor-container {
+        grid-template-columns: 1fr; /* 1 card per row on extra small screens */
+    }
+}
+/* Cards layout for students */
+.student-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.student-card {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    flex: 1;
+    min-width: 250px;
+    max-width: 300px;
+    text-align: center;
+    color: white;
+}
+
+.student-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.student-card h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.student-card p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.student-card .btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+    width: 100px;
+}
+
+.student-card .btn:hover {
+    background-color: #0056b3;
+}
+
+.student-card .delete-btn {
+    background-color: #ff4c4c;
+}
+
+.student-card .delete-btn:hover {
+    background-color: #e60000;
 }
